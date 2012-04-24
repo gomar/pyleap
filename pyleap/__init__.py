@@ -20,4 +20,4 @@ __all__ = ['HbComputation',
            'HbAlgoAPFT',
            'HbAlgoOPT']
 
-__version__ = '0.2'
+__version__ = '0.2.1'
