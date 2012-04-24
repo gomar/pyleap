@@ -1,16 +1,16 @@
-Bench_algo
-============
+timelevels_distribution
+========================
 
 Two scripts are given:
-- bench_algo.py: the python script that gives the results
-- bench_algo.gnuplot: script to generate figures
+- timelevels_distribution.py: the python script that gives the results
+- timelevels_distribution.gnuplot: script to generate figures
 
 To reproduce the figures, pyleap must be correctly installed and then:
-- python bench_algo.py (wait to finish),
-- gnuplot bench_algo.gnuplot
-- latex BENCH_ALGO_PA.tex
-  dvips -P pdf -E BENCH_ALGO_PA.dvi -o BENCH_ALGO_PA.eps
-  epstopdf BENCH_ALGO_PA.eps
-- latex BENCH_ALGO_EQUI.tex
-  dvips -P pdf -E BENCH_ALGO_EQUI.dvi -o BENCH_ALGO_EQUI.eps
-  epstopdf BENCH_ALGO_EQUI.eps
+- python timelevels_distribution.py (wait to finish),
+- gnuplot timelevels_distribution.gnuplot
+- latex NONEQUI_TIMELEVELS_POSITION_F1.tex
+  dvips -P pdf -E NONEQUI_TIMELEVELS_POSITION_F1.dvi -o NONEQUI_TIMELEVELS_POSITION_F1.eps
+  epstopdf NONEQUI_TIMELEVELS_POSITION_F1.eps
+- latex NONEQUI_TIMELEVELS_POSITION_F1.tex
+  dvips -P pdf -E NONEQUI_TIMELEVELS_POSITION_F1.dvi -o NONEQUI_TIMELEVELS_POSITION_F1.eps
+  epstopdf NONEQUI_TIMELEVELS_POSITION_F1.eps
