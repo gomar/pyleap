@@ -13,6 +13,10 @@ non evenly spaced timelevels in each frequency
 period
 """
 
+import sys
+# dirty way to add module to pythonpath
+sys.path.append('../..')
+
 import pyleap
 import numpy as np
 

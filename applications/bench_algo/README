@@ -5,7 +5,7 @@ Two scripts are given:
 - bench_algo.py: the python script that gives the results
 - bench_algo.gnuplot: script to generate figures
 
-To reproduce the figures, pyleap must be correctly installed and then:
+To reproduce the figures:
 - python bench_algo.py (wait to finish),
 - gnuplot bench_algo.gnuplot
 - latex BENCH_ALGO_PA.tex

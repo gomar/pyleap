@@ -11,6 +11,10 @@ Script to estimate the performance of sampling
 algorithms for almost-periodic computations.
 """
 
+import sys
+# dirty way to add module to pythonpath
+sys.path.append('../..')
+
 from pyleap import HbComputation, HbAlgoAPFT, HbAlgoOPT, HbAlgoEQUI
 import numpy as np
 
