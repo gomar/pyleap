@@ -1,6 +1,11 @@
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@
-# paper plot, initialization
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# 
+#  timelevels_distribution.gnuplot
+#  PyLeap
+#  
+#  Created by Adrien Gomar on 2012-04-24.
+#  Copyright 2012 CERFACS. All rights reserved.
+# 
+
 # global style definition
 set style line 2 linetype -1 linewidth 1 lc rgb "gray70"
 set style line 3 linetype 1 linewidth 2

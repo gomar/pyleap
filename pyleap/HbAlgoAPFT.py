@@ -1,7 +1,10 @@
-"""
-Implementation of the APFT algorithm defined in
-Kundert et al. "Applying Harmonic Balance to Almost-Periodic Circuits"
-"""
+# 
+#  HbAlgoAPFT.py
+#  PyLeap
+#  
+#  Created by Adrien Gomar on 2012-04-24.
+#  Copyright 2012 CERFACS. All rights reserved.
+# 
 
 from pyleap.HbAlgoInterface import HbAlgoInterface 
 from scipy.optimize import fminbound
@@ -9,8 +12,12 @@ from pyleap.HbComputation import HbComputation
 import numpy as np
 
 
-class HbAlgoAPFT():
-
+class HbAlgoAPFT:
+    """
+    Implementation of the APFT algorithm defined in
+    Kundert et al. "Applying Harmonic Balance to Almost-Periodic Circuits"
+    """
+    
     def __init__(self, frequencies):
         self.frequencies = np.array(frequencies, dtype=float)
 

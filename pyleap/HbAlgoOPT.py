@@ -1,16 +1,22 @@
-"""
-Implementation of a gradient-based algorithm over the
-condition number
-"""
+# 
+#  HbAlgoOPT.py
+#  PyLeap
+#  
+#  Created by Adrien Gomar on 2012-04-24.
+#  Copyright 2012 CERFACS. All rights reserved.
+# 
 
-from pyleap.HbAlgoInterface import HbAlgoInterface
 from pyleap.HbComputation import HbComputation
 from scipy.optimize import fmin_l_bfgs_b
 import numpy as np
 
 
-class HbAlgoOPT(HbAlgoInterface):
-
+class HbAlgoOPT:
+    """
+    Implementation of a gradient-based algorithm over the
+    condition number
+    """
+    
     def __init__(self, frequencies, target=0.):
         self.frequencies = np.array(frequencies, dtype=float)
         self.target = float(target)

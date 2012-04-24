@@ -1,8 +1,15 @@
-from pyleap.HbAlgoInterface import HbAlgoInterface 
+# 
+#  HbAlgoEQUI.py
+#  PyLeap
+#  
+#  Created by Adrien Gomar on 2012-04-24.
+#  Copyright 2012 CERFACS. All rights reserved.
+# 
+
 import numpy as np
 
 
-class HbAlgoEQUI(HbAlgoInterface):
+class HbAlgoEQUI:
 
     def __init__(self, frequencies, sampling=None):
         self.frequencies = np.array(frequencies, dtype=float)
