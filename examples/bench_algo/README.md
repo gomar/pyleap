@@ -1,4 +1,6 @@
-PyLeap
-======
+Bench_algo
+============
 
-**Py**thon A**l**most P**e**riodic S**a**m**p**ling Algorithms
+Two scripts are given:
+- bench_algo.py: the python script that gives the results
+- bench_algo.gnuplot
