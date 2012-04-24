@@ -1,6 +1,10 @@
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@
-# paper plot, initialization
-#@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# 
+#  bench_algo_fig.gnuplot
+#  PyLeap
+#  
+#  Created by Adrien Gomar on 2012-04-24.
+#  Copyright 2012 CERFACS. All rights reserved.
+# 
 
 # global style definition
 set style line 1 linetype -1 linewidth 1
