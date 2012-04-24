@@ -11,3 +11,5 @@ __all__ = ['HbComputation',
            'HbAlgoEQUI',
            'HbAlgoAPFT',
            'HbAlgoOPT']
+
+__version__ = '0.1'
