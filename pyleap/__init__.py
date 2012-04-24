@@ -1,3 +1,11 @@
+# 
+#  __init__.py
+#  PyLeap
+#  
+#  Created by Adrien Gomar on 2012-04-24.
+#  Copyright 2012 CERFACS. All rights reserved.
+# 
+
 __all__ = []
 
 # ApComputation
@@ -12,4 +20,4 @@ __all__ = ['HbComputation',
            'HbAlgoAPFT',
            'HbAlgoOPT']
 
-__version__ = '0.1'
+__version__ = '0.2'

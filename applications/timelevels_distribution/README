@@ -1,0 +1,16 @@
+timelevels_distribution
+========================
+
+Two scripts are given:
+- timelevels_distribution.py: the python script that gives the results
+- timelevels_distribution.gnuplot: script to generate figures
+
+To reproduce the figures, pyleap must be correctly installed and then:
+- python timelevels_distribution.py (wait to finish),
+- gnuplot timelevels_distribution.gnuplot
+- latex NONEQUI_TIMELEVELS_POSITION_F1.tex
+  dvips -P pdf -E NONEQUI_TIMELEVELS_POSITION_F1.dvi -o NONEQUI_TIMELEVELS_POSITION_F1.eps
+  epstopdf NONEQUI_TIMELEVELS_POSITION_F1.eps
+- latex NONEQUI_TIMELEVELS_POSITION_F1.tex
+  dvips -P pdf -E NONEQUI_TIMELEVELS_POSITION_F1.dvi -o NONEQUI_TIMELEVELS_POSITION_F1.eps
+  epstopdf NONEQUI_TIMELEVELS_POSITION_F1.eps
