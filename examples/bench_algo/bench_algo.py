@@ -20,6 +20,7 @@ def main(f, f1, algo_choice, sampling=None):
     elif algo_choice == 'EQUI_20N_1':
         ALGO = HbAlgoEQUI(frequencies=FREQ, sampling=20 * len(FREQ) + 1)
     
+    # setting the optimized time levels to compute the DFT condition number
     hb_computation.set_timelevels(ALGO.optimize_timelevels())
     return hb_computation.conditionning()
 
@@ -29,7 +30,7 @@ if __name__ == '__main__':
     def launch(ALGO_CHOICE):
         # base frequency to compute the delta_f_star
         f1 = 3.
-        # number of sample for delta_f_star discretization
+        # number of samples for delta_f_star discretization
         SAMPLING = 1000
         # computing delta_f_star and the corresponding f vector
         delta_f_star = np.linspace(0.001, 1.999, num=SAMPLING)
@@ -51,7 +52,7 @@ if __name__ == '__main__':
         # saving the result (delta_f_star, conditionning) to a file
         np.savetxt(fname='BENCH_ALGO_%s.dat' % ALGO_CHOICE, X=RESU)
         
-        
+    # launching all the algorithms   
     launch('EQUI_2N_1')
     launch('EQUI_3N_1')
     launch('EQUI_20N_1')
