@@ -5,7 +5,7 @@ Two scripts are given:
 - timelevels_distribution.py: the python script that gives the results
 - timelevels_distribution.gnuplot: script to generate figures
 
-To reproduce the figures, pyleap must be correctly installed and then:
+To reproduce the figures:
 - python timelevels_distribution.py (wait to finish),
 - gnuplot timelevels_distribution.gnuplot
 - latex NONEQUI_TIMELEVELS_POSITION_F1.tex
