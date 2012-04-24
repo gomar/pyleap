@@ -3,19 +3,19 @@ Implementation of the APFT algorithm defined in
 Kundert et al. "Applying Harmonic Balance to Almost-Periodic Circuits"
 """
 
-from pyleap.ApAlgoInterface import ApAlgoInterface 
+from pyleap.HbAlgoInterface import HbAlgoInterface 
 from scipy.optimize import fminbound
-from pyleap.ApComputation import ApComputation
+from pyleap.HbComputation import HbComputation
 import numpy as np
 
 
-class ApAlgoAPFT():
+class HbAlgoAPFT():
 
     def __init__(self, frequencies):
         self.frequencies = np.array(frequencies, dtype=float)
 
     def _conditionning(self, timelevels):
-        ap_computation = ApComputation(frequencies=self.frequencies,
+        ap_computation = HbComputation(frequencies=self.frequencies,
                                        timelevels=timelevels)
         return ap_computation.conditionning()
 
@@ -41,7 +41,7 @@ class ApAlgoAPFT():
         # the timelevels will be discretized
         freq_min = np.min(np.absolute(self.frequencies))
         timelevels = 6 * np.arange(0, 1., 1. / float(over_sampling)) / freq_min
-        ap_computation = ApComputation(frequencies=self.frequencies,
+        ap_computation = HbComputation(frequencies=self.frequencies,
                                        timelevels=timelevels)
         
         # computing the corresponding hbt_matrix

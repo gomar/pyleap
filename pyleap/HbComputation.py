@@ -4,7 +4,7 @@
 import numpy as np
 
 
-class ApComputation():
+class HbComputation():
     """
     Defines an Almost-Periodic Computation. The IDFT and DFT
     Almost-Periodic Matrix can be computed
@@ -46,7 +46,7 @@ class ApComputation():
         Compute the Almost-Periodic IDFT matrix
         """
         # if no frequencies are given, then it is the one of
-        # the ApComputation
+        # the HbComputation
         if frequencies == None:
             frequencies = self.frequencies
         else:

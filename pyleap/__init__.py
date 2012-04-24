@@ -1,13 +1,13 @@
 __all__ = []
 
 # ApComputation
-ApComputation = __import__('ApComputation', globals(), locals(), ['ApComputation']).ApComputation
+HbComputation = __import__('HbComputation', globals(), locals(), ['HbComputation']).HbComputation
 
 # loading the different algorithms
-ApAlgoEQUI = __import__('ApAlgoEQUI', globals(), locals(), ['ApAlgoEQUI']).ApAlgoEQUI
-ApAlgoAPFT = __import__('ApAlgoAPFT', globals(), locals(), ['ApAlgoAPFT']).ApAlgoAPFT
-ApAlgoOPT = __import__('ApAlgoOPT', globals(), locals(), ['ApAlgoOPT']).ApAlgoOPT
-__all__ = ['ApComputation',
-           'ApAlgoEQUI',
-           'ApAlgoAPFT',
-           'ApAlgoOPT']
+HbAlgoEQUI = __import__('HbAlgoEQUI', globals(), locals(), ['HbAlgoEQUI']).HbAlgoEQUI
+HbAlgoAPFT = __import__('HbAlgoAPFT', globals(), locals(), ['HbAlgoAPFT']).HbAlgoAPFT
+HbAlgoOPT = __import__('HbAlgoOPT', globals(), locals(), ['HbAlgoOPT']).HbAlgoOPT
+__all__ = ['HbComputation',
+           'HbAlgoEQUI',
+           'HbAlgoAPFT',
+           'HbAlgoOPT']

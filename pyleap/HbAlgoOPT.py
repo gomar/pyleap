@@ -3,22 +3,22 @@ Implementation of a gradient-based algorithm over the
 condition number
 """
 
-from pyleap.ApAlgoInterface import ApAlgoInterface
-from pyleap.ApComputation import ApComputation
+from pyleap.HbAlgoInterface import HbAlgoInterface
+from pyleap.HbComputation import HbComputation
 from scipy.optimize import fmin_l_bfgs_b
 import numpy as np
 
 
-class ApAlgoOPT(ApAlgoInterface):
+class HbAlgoOPT(HbAlgoInterface):
 
     def __init__(self, frequencies, target=0.):
         self.frequencies = np.array(frequencies, dtype=float)
         self.target = float(target)
 
     def _conditionning(self, timelevels):
-        ap_computation = ApComputation(frequencies=self.frequencies,
+        hb_computation = HbComputation(frequencies=self.frequencies,
                                        timelevels=timelevels)
-        return abs(ap_computation.conditionning() - self.target)
+        return abs(hb_computation.conditionning() - self.target)
 
     def optimize_timelevels(self):
         # sampling the minimum frequency to get fractions

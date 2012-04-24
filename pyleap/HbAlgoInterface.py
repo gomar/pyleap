@@ -1,6 +1,6 @@
 
 
-class ApAlgoInterface():
+class HbAlgoInterface():
 
     def __init__(self):
         pass

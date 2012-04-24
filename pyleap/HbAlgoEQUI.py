@@ -1,8 +1,8 @@
-from pyleap.ApAlgoInterface import ApAlgoInterface 
+from pyleap.HbAlgoInterface import HbAlgoInterface 
 import numpy as np
 
 
-class ApAlgoEQUI(ApAlgoInterface):
+class HbAlgoEQUI(HbAlgoInterface):
 
     def __init__(self, frequencies, sampling=None):
         self.frequencies = np.array(frequencies, dtype=float)
