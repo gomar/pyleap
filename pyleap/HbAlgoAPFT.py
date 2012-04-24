@@ -6,7 +6,6 @@
 #  Copyright 2012 CERFACS. All rights reserved.
 # 
 
-from pyleap.HbAlgoInterface import HbAlgoInterface 
 from scipy.optimize import fminbound
 from pyleap.HbComputation import HbComputation
 import numpy as np
