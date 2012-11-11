@@ -71,6 +71,35 @@ class HbComputation():
         frequencies = frequencies.reshape((1, frequencies.shape[0]))
         return np.exp(2 * 1j * np.pi * np.dot(timelevels, frequencies))
 
+    def ap_source_term(self, frequencies=None, timelevels=None):
+        """
+        Compute the Almost-Periodic source term which is
+        to :math:`D_t[\cdot] = i A^{-1} P A`, where :math:`A` denotes
+        the DFT matrix, :math:`A^{-1}` the IDFT matrix  
+        and :math:`P = diag(-\omega_N,\ldots,\omega_0,\ldots,\omega_N )`
+        """
+        # if no frequencies are given, then it is the one of
+        # the HbComputation
+        if frequencies == None:
+            frequencies = self.frequencies
+        else:
+            frequencies = np.array(frequencies, dtype=float)
+        # same for the timelevels
+        if timelevels == None:
+            timelevels = self.timelevels
+        else:
+            timelevels = np.array(timelevels, dtype=float)
+
+        # building diagonal P matrix
+        P = np.insert(2 * np.pi * frequencies, 0, 0)
+        P = np.append(-P[:0:-1], P)
+        P = np.diag(P)
+        Dt = np.dot(np.dot(self.ap_idft_matrix(frequencies=frequencies,
+                                               timelevels=timelevels), P),
+                           self.ap_dft_matrix(frequencies=frequencies,
+                                              timelevels=timelevels))
+        return Dt
+
     def ap_dft_matrix(self, frequencies=None, timelevels=None):
         """
         Compute the Almost-Periodic DFT matrix
