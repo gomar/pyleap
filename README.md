@@ -4,6 +4,7 @@ PyLeap
 **Py**thon A**l**most P**e**riodic S**a**m**p**ling Algorithms
 
 This library contains a set of functions that have been used to 
+
 1. Demonstrate the need of properly choosing the time samples before launching an harmonic balance computation
 2. Highlight the benefits of an optimization algorihtm to choose such samples
 
